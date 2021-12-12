@@ -1,0 +1,6 @@
+START TRANSACTION;
+INSERT INTO "logs" ("date", "count") VALUES ('2021-12-14 23:00:00.000000'::timestamptz, 3);
+COMMIT;
+START TRANSACTION;
+UPDATE "logs" SET "count" = 5 WHERE "date" = '2021-12-15 00:00:00.000000';
+COMMIT;
